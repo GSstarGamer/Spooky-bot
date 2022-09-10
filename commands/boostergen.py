@@ -18,7 +18,7 @@ class boostergen(commands.Cog):
     async def roblox2(self, ctx):
         channel = ctx.channel.id
 
-        if channel == 1017454496202358874:
+        if channel == j["boostergenchannel"]:
             with open(j["accountslocation"], "r") as f2:
                 rline = f2.readlines()
                 randomline = random.choice(rline)
@@ -45,7 +45,7 @@ class boostergen(commands.Cog):
             embedch.set_footer(text = f"Current stock: {count}")
             await ctx.reply(embed = embedch)
         
-        elif channel != 1017454496202358874:
+        elif channel != j["boostergenchannel"]:
             embed = discord.Embed(title = "Wrong Channel", description = "Please Go To <#1013323993274667116> And Try Again!", color = (0xeb673b))
             await ctx.reply(embed = embed) 
 

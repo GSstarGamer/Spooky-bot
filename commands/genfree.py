@@ -17,7 +17,7 @@ class freegen(commands.Cog):
     async def roblox(self, ctx):
         channel = ctx.channel.id
 
-        if channel == 1017454482885464114:
+        if channel == j["freegenchannel"]:
             with open(j["accountslocation"], "r") as f1:
                 rline = f1.readlines()
                 randomline = random.choice(rline)
@@ -44,7 +44,7 @@ class freegen(commands.Cog):
             embedch.set_footer(text = f"Current stock: {count}")
             await ctx.reply(embed = embedch)
         
-        elif channel != 1017454482885464114:
+        elif channel != j["freegenchannel"]:
             embed = discord.Embed(title = "Wrong Channel", description = "Please Go To <#1013323993274667115> And Try Again!", color = (0xeb673b))
             await ctx.reply(embed = embed) 
 
