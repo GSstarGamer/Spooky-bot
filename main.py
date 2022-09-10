@@ -11,11 +11,9 @@ with open("config.json", "r") as json_file:
 os.system("cls")
 print("Loading Spooky bot :cool:")
 
-intents = discord.Intents.all()
-discord.member = True
 
 Bot_Prefix = j["prefix"]
-bot = commands.Bot(command_prefix=Bot_Prefix, intents = intents)
+bot = commands.Bot(command_prefix=Bot_Prefix)
 bot.remove_command("help")
 
 
