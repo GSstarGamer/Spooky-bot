@@ -17,6 +17,7 @@ class stockcheck(commands.Cog):
         with open(j["accountslocation"], 'r') as fp:
             lines = len(fp.readlines())
             embed = discord.Embed(title = "**Current Roblox Stock**:", description = lines, color = (0xeb673b))
+            embed.set_footer(text = j["footer"])
             await ctx.reply(embed = embed)
 
 def setup(bot):
