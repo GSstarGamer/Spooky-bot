@@ -23,14 +23,12 @@ bot.remove_command("help")
 async def on_ready():
     os.system("cls")
     print(f"Ez, logged into bot '{bot.user.display_name}'.")
-    await bot.change_presence(activity=discord.Streaming(name=j["activity"], url="https://www.twitch.tv/who_is_halloween"))
-
 
 #cogs
-for filename in os.listdir('./commands'):
+for filename in os.listdir('./modules'):
     if filename.endswith('.py'):
        print(f"Loading cog: {filename}")
-       bot.load_extension(f'commands.{filename[:-3]}')\
+       bot.load_extension(f'modules.{filename[:-3]}')\
 
 #help command
 genfree = f"""
